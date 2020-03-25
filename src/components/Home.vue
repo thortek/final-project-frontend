@@ -41,10 +41,9 @@
 </template>
 
 <script>
-//import vue-truncate-filter from 'vue-truncate-filter'
 
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
 
   data: () => ({
     searchString: "DGM"
