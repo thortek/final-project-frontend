@@ -8,21 +8,24 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+     <!--  <HelloWorld/> -->
+     <AddCourse/>
     </v-content>
   </v-app>
 </template>
 
 <script>
 //import ApolloExample from './components/ApolloExample';
-import HelloWorld from './components/HelloWorld'
+//import HelloWorld from './components/HelloWorld'
+import AddCourse from './components/AddCourse'
 
 export default {
   name: 'App',
 
   components: {
     //ApolloExample,
-    HelloWorld
+    //HelloWorld
+    AddCourse
   },
 
   data: () => ({

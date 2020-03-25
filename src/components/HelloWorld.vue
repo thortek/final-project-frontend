@@ -13,7 +13,7 @@
       <div v-else-if="data" class="result apollo">
         <v-row>
           <v-col cols="4" v-for="(item, i) in data.Courses" :key="i">
-            <v-card class="mx-auto" max-width="350">
+            <v-card class="mx-auto" max-height="300">
               <v-card-text>
                 <div>{{ item.courseCode }}</div>
                 <p class="courseName">
