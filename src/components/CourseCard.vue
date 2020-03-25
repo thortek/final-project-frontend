@@ -1,6 +1,6 @@
 <template>
   <!-- Apollo watched Graphql query -->
-  <ApolloQuery :query="require('../graphql/HelloWorld.gql')"
+  <ApolloQuery :query="require('../graphql/AllCourses.gql')"
    :variables="{ searchString }">
     <template v-slot="{ result: { loading, error, data } }">
       <!-- Loading -->

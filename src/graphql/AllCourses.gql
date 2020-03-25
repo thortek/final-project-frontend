@@ -1,4 +1,4 @@
-query allCourses ($searchString: String) {
+query AllCourses ($searchString: String) {
   Courses (searchString: $searchString) {
     name
     description
