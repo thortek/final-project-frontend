@@ -8,8 +8,13 @@
     </v-app-bar>
 
     <v-content>
+      <div>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/admin">Admin</router-link>
+      </div>
       <!-- <CourseCard/> -->
-      <AddCourse/>
+      <!-- <Admin/> -->
+      <router-view/>
     </v-content>
   </v-app>
 </template>
@@ -17,7 +22,7 @@
 <script>
 //import ApolloExample from './components/ApolloExample';
 //import CourseCard from './components/CourseCard'
-import AddCourse from './components/AddCourse'
+//import Admin from './components/Admin'
 
 export default {
   name: 'App',
@@ -25,7 +30,7 @@ export default {
   components: {
     //ApolloExample,
     //CourseCard,
-    AddCourse
+    //Admin
   },
 
   data: () => ({
