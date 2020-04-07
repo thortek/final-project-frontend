@@ -1,6 +1,6 @@
 <template>
   <!-- Apollo watched Graphql query -->
-  <ApolloQuery :query="require('../graphql/HelloWorld.gql')"
+  <ApolloQuery :query="require('../graphql/AllCourses.gql')"
    :variables="{ searchString }">
     <template v-slot="{ result: { loading, error, data } }">
       <!-- Loading -->
@@ -25,8 +25,8 @@
                 </div>
               </v-card-text>
               <v-card-actions>
-                <v-btn text color="deep-purple accent-4">
-                  Learn More
+                <v-btn text color="deep-purple accent-4" @click="editCourse(item)">
+                  Edit Course
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -46,8 +46,15 @@ export default {
   name: 'Home',
 
   data: () => ({
-    searchString: "DGM"
+    searchString: "DGM",
   }),
+  methods: {
+    editCourse(course) {
+      this.$router.push('admin')
+      this.$store.dispatch('editCourse', course)
+    }
+  }
+
 }
 </script>
 

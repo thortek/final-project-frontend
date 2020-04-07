@@ -15,8 +15,8 @@ export default new VueRouter({
         },
         {
             path: '/admin',
-            name: "admin",
-            component: Admin
+            component: Admin,
+            name: 'admin'
         }
     ]
 })
