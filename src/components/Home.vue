@@ -12,7 +12,7 @@
       <!-- Result -->
       <div v-else-if="data" class="result apollo">
         <v-row>
-          <v-col cols="4" v-for="(item, i) in data.Courses" :key="i">
+          <v-col cols="4" v-for="(item, i) in data.courses" :key="i">
             <v-card class="mx-auto" max-width="350">
               <v-card-text>
                 <div>{{ item.courseCode }}</div>
@@ -25,9 +25,9 @@
                 </div>
               </v-card-text>
               <v-card-actions>
-                <v-btn text color="deep-purple accent-4">
-                  Learn More
-                </v-btn>
+                <v-btn color="primary" fab x-small dark @click="editCourse(item)">
+              <v-icon>mdi-pencil</v-icon>
+            </v-btn>
               </v-card-actions>
             </v-card>
           </v-col>
@@ -44,11 +44,17 @@
 //import vue-truncate-filter from 'vue-truncate-filter'
 
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
 
   data: () => ({
     searchString: "DGM"
   }),
+  methods: {
+    editCourse(course) {
+      this.$store.dispatch('editCourse', course)
+      this.$router.push('admin')
+    }
+  }
 }
 </script>
 

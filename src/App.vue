@@ -2,16 +2,18 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
       dark
     >
+    <v-spacer></v-spacer>
+    <div>
+        <router-link class="routerLink" to="/">Home</router-link><span class="routerLink"> | </span>
+        <router-link class="routerLink" to="/admin">Admin</router-link>
+      </div>
+    <v-spacer></v-spacer>
     </v-app-bar>
 
     <v-content>
-      <div>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/admin">Admin</router-link>
-      </div>
+      
       <!-- <CourseCard/> -->
       <!-- <Admin/> -->
       <router-view/>
@@ -38,3 +40,14 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+.routerLink {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+</style>

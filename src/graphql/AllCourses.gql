@@ -1,5 +1,6 @@
 query AllCourses ($searchString: String) {
-  Courses (searchString: $searchString) {
+  courses (searchString: $searchString) {
+    id
     name
     description
     defaultCredits

@@ -1,0 +1,16 @@
+mutation UpdateCourse ($id: String!, $name: String!, $description: String, $defaultCredits: String, $courseCode: String!, $termsOffered: String) {
+  updateOneCourse (where:
+    { id: $id},
+    data: { 
+    name: $name,
+    description: $description,
+    defaultCredits: $defaultCredits,
+    courseCode: $courseCode,
+    termsOffered: {
+      set: $termsOffered
+    }
+    }
+  ) {
+      id
+  }
+}
